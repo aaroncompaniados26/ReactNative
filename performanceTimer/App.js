@@ -7,22 +7,14 @@
  */
 
 import React from 'react';
-import {
-  SafeAreaView,
-  StyleSheet,
-  ScrollView,
-  View,
-  Text,
-  StatusBar,
-} from 'react-native';
-
+import { SafeAreaView } from 'react-native';
+// Pages
+import HomeView from './src/components/home/Homeview';
 
 const App: () => React$Node = () => {
   return (
     <SafeAreaView>
-      <View style={{height: 200 , width: 200 , backgroundColor: 'red'}}>
-        <Text>Hello World</Text>
-      </View>
+      <HomeView/>
     </SafeAreaView>
   );
 };
