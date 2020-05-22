@@ -13,8 +13,8 @@ import HomeView from './src/components/home/Homeview';
 
 const App: () => React$Node = () => {
   return (
-    <SafeAreaView>
-      <HomeView/>
+    <SafeAreaView style={{ flex: 1 }}>
+      <HomeView style={{position: "relative"}}/>
     </SafeAreaView>
   );
 };
