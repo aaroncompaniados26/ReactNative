@@ -14,7 +14,7 @@ const styles = {
     color: "rgba(255, 255, 255, 0.97)" ,  
     textShadowColor: "rgba(0, 0, 0, 0.25)" ,
     textShadowOffset: { width: 0 , height: 4 } ,
-    textShadowRadius: 4
+    textShadowRadius: 14
     // filter: blur(4px)
   }
 }
