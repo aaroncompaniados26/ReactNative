@@ -2,27 +2,6 @@ import React from 'react'
 import { Text } from 'react-native'
 
 
-const styles = {
-  h1: {
-    top: 50 ,
-    width: 64 ,
-    height: 47 ,
-    left: 98 ,
-    fontFamily: "Roboto" ,
-    fontWeight: "normal" ,
-    fontSize: 40 ,
-    lineHeight: 47 ,
-    /* identical to box height */
-    // font-feature-settings: 'tnum' on, 'onum' on, 'cpsp' on, 'ss01' on, 'ss04' on, 'ss07' on ,
-    color: "#594242" ,  
-    opacity: 0.8 ,
-    textShadowColor: "rgba(0, 0, 0, 0.25)" ,
-    textShadowOffset: { width: 0 , height: 4 } , 
-    textShadowRadius: 4
-    // filter: blur(4px);
-  }
-}
-
 const Greetings = () => {
   let result = '';
   let day = new Date();
@@ -39,7 +18,7 @@ const Greetings = () => {
   :
   'Sorry bro, I got broken'
   
-return <Text style={styles.h1}>{result}</Text>
+  return <Text>{result}</Text>
 }
 
 export default Greetings;

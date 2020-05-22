@@ -9,12 +9,12 @@
 import React from 'react';
 import { SafeAreaView } from 'react-native';
 // Pages
-import HomeView from './src/components/home/Homeview';
+import Homeview from './src/components/home/Homeview';
 
 const App: () => React$Node = () => {
   return (
     <SafeAreaView style={{ flex: 1 }}>
-      <HomeView style={{position: "relative"}}/>
+      <Homeview style={{position: "relative"}}/>
     </SafeAreaView>
   );
 };

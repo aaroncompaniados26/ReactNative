@@ -6,42 +6,27 @@ import {
   Image ,
   TouchableOpacity
 } from 'react-native';
+import { homeStyles } from './homeViewStyles'
 // Comps.
 import Greetings from '../utils/Greetings'
 import GetFecha from '../utils/date'
 
-const styles = {
-  imgBackg: {
-    width: '100%' ,
-    height: '100%'
-  },
-  icon: {
-    width: 80 ,
-    height: 80 ,
-    top: 90 ,  
-    left: 140 ,
-    // mixBlendMode: "overlay" ,
-    // boxShadow: "0 4 4 rgba(0, 0, 0, 0.25)" 
-    // filter: blur(4) 
-  }
-}
-
 const Homeview = () => {
   return (
-    <View style={{ flex: 1 }}>
+    <View style={{ flex: 1 , alignItems: 'center'}}>
       <ImageBackground
         source={require('./lion.webp')}
         resizeMode='cover'
-        style={ styles.imgBackg }
+        style={ homeStyles.imgBackg }
       >
         <View style={{ flex: 0.90 }}>
-          <Text><Greetings /></Text>
+          <Text style={homeStyles.h1}><Greetings /></Text>
         </View>
         <View style={{ flex: 1}}>
           <TouchableOpacity onPress={() => console.log('Pressed')}>
             <Image 
               source={require('./27223.webp')}
-              style={ styles.icon } 
+              style={ homeStyles.icon } 
             />
           </TouchableOpacity>
         </View>
