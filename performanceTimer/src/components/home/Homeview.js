@@ -23,7 +23,10 @@ const Homeview = () => {
           <Text style={homeStyles.h1}><Greetings /></Text>
         </View>
         <View style={{ flex: 1}}>
-          <TouchableOpacity onPress={() => console.log('Pressed')}>
+          <TouchableOpacity 
+            onPress={() => console.log('Pressed')}
+            style={homeStyles.touch}
+          >
             <Image 
               source={require('./27223.webp')}
               style={ homeStyles.icon } 
