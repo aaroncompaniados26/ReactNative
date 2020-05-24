@@ -16,9 +16,8 @@ export const homeStyles = StyleSheet.create({
     fontFamily: 'cursive' ,
     fontWeight: 'bold',
     fontSize: 40 ,
-    color: 'rgb(122,111,111)' ,
-    lineHeight: 47 ,
-    opacity: 0.8 ,
+    color: 'rgb( 255, 255, 255 )' ,
+    opacity: 0.6 ,
     textShadowColor: "rgba(0, 0, 0, 0.25)" ,
     textShadowOffset: { width: 0 , height: 4 } , 
     textShadowRadius: 4

@@ -1,4 +1,3 @@
-<script src="http://localhost:8097"></script>
 import React from 'react';
 import { 
   View , 
@@ -28,8 +27,8 @@ const Homeview = () => {
             onPress={() => console.log('Pressed')}
             style={homeStyles.touch}
           >
-            <ImageBackground 
-                source={require('./27223.webp')}
+            <Image 
+                source={require('./test.webp')}
                 style={ homeStyles.icon } 
             />
           </TouchableOpacity>
