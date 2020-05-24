@@ -1,18 +1,23 @@
 import { StyleSheet } from 'react-native';
 
 export const homeStyles = StyleSheet.create({
+  container: {
+    flex: 1,
+    flexDirection: "column" 
+  },
   imgBackg: {
-    width: '100%' ,
-    height: '100%'
+    flex: 1,
+    resizeMode: "cover",
+    justifyContent: "center"
   },
   h1: {
     marginTop: 50 ,
     textAlign: 'center' ,
-    color: '#FFF' ,
-    fontFamily: "Roboto" ,
+    fontFamily: 'cursive' ,
+    fontWeight: 'bold',
     fontSize: 40 ,
+    color: 'rgb(122,111,111)' ,
     lineHeight: 47 ,
-    color: "#594242" ,  
     opacity: 0.8 ,
     textShadowColor: "rgba(0, 0, 0, 0.25)" ,
     textShadowOffset: { width: 0 , height: 4 } , 
@@ -20,13 +25,14 @@ export const homeStyles = StyleSheet.create({
   } ,
   touch: {
     display: 'flex' ,
-    width: 100 ,
-    height: 100 ,
+    width: 80 ,
+    height: 80 ,
     left: 140 , 
-    top: 50
+    top: 50 
   },
   icon: {
     width: 80 ,
-    height: 80 
+    height: 80 ,
+    opacity: 0.8 
   }
 })

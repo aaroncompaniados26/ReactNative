@@ -3,19 +3,17 @@ import { Text } from 'react-native'
 
 const styles = {
   dat: {
-    left: 60 ,
-    top: 75 ,
-    fontFamily: "Roboto" ,
-    fontSize: 40 ,
-    lineHeight: 47 ,
-    /* identical to box height */
-    textAlign: "center" ,
-    // font-feature-settings: 'tnum' on, 'onum' on, 'cpsp' on, 'ss04' on, 'ss07' on, 'ss01' on, 'ss03' on ,
-    color: "rgba(255, 255, 255, 0.97)" ,  
+    top: 60 ,
+    right: 20 ,
+    textAlign: 'right',
+    fontFamily: 'cursive' ,
+    fontWeight: 'bold',
+    fontSize: 30 ,
+    color: "rgb(188,182,182)" ,  
+    opacity: 0.5 ,
     textShadowColor: "rgba(0, 0, 0, 0.25)" ,
-    textShadowOffset: { width: 0 , height: 4 } ,
-    textShadowRadius: 14
-    // filter: blur(4px)
+    textShadowOffset: { width: 0 , height: 4 } , 
+    textShadowRadius: 4
   }
 }
 

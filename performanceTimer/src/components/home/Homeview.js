@@ -1,19 +1,20 @@
+<script src="http://localhost:8097"></script>
 import React from 'react';
 import { 
   View , 
   Text , 
   ImageBackground , 
   Image ,
-  TouchableOpacity
+  TouchableOpacity 
 } from 'react-native';
 import { homeStyles } from './homeViewStyles'
 // Comps.
 import Greetings from '../utils/Greetings'
 import GetFecha from '../utils/date'
 
-const Homeview = () => {
+const Homeview = () => {  
   return (
-    <View style={{ flex: 1 , alignItems: 'center'}}>
+    <View style={homeStyles.container}>
       <ImageBackground
         source={require('./lion.webp')}
         resizeMode='cover'
@@ -27,13 +28,15 @@ const Homeview = () => {
             onPress={() => console.log('Pressed')}
             style={homeStyles.touch}
           >
-            <Image 
-              source={require('./27223.webp')}
-              style={ homeStyles.icon } 
+            <ImageBackground 
+                source={require('./27223.webp')}
+                style={ homeStyles.icon } 
             />
           </TouchableOpacity>
         </View>
-        <View style={{ flex: 1 }}><GetFecha /></View>
+        <View style={{ flex: 1 }}>
+          <GetFecha />
+        </View>
       </ImageBackground>
     </View>
   )
