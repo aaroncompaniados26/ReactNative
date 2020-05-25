@@ -14,7 +14,48 @@ import GetFecha from '../utils/date'
 
 
 class Homeview extends Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      time: 0 ,
+      view: false
+    }
+  }
+  renderPlay(play=false){
+    return (
+      <TouchableOpacity 
+      style={homeStyles.touch}
+      onPress={
+        () => {
+          setInterval( () => {
+            this.setState({
+              time: this.state.time + 1000
+            })
+          } , 1000 )
+        }
+      }
+      >
+        <Image 
+            source={require('./test.webp')}
+            style={ homeStyles.icon } 
+        />
+      </TouchableOpacity>
+    )
+  }
+
+  renderTimer(){
+    const { time } = this.state;
+    return (
+      <TouchableOpacity 
+        onPress={() => console.log('Pressed')}
+        style={homeStyles.touch}
+      >
+        <Text>{time}</Text>
+      </TouchableOpacity>
+    )
+  }
   render() {
+    const { time } = this.state;
     return (
       <View style={homeStyles.container}>
         <ImageBackground
@@ -26,15 +67,12 @@ class Homeview extends Component {
             <Text style={homeStyles.h1}><Greetings /></Text>
           </View>
           <View style={{ flex: 1}}>
-            <TouchableOpacity 
-              onPress={() => console.log('Pressed')}
-              style={homeStyles.touch}
-            >
-              <Image 
-                  source={require('./test.webp')}
-                  style={ homeStyles.icon } 
-              />
-            </TouchableOpacity>
+            {
+              time > 0 ? 
+                this.renderTimer()
+                :
+                this.renderPlay() 
+            }
           </View>
           <View style={{ flex: 1 }}>
             <GetFecha />
